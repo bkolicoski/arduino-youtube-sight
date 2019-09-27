@@ -1,0 +1,12 @@
+# Syntax Coloring Map For ExampleLibrary
+
+# Datatypes (KEYWORD1)
+YouTubeSight KEYWORD1
+channelStatistics KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+getData	KEYWORD2
+
+# Instances (KEYWORD2)
+
+# Constants (LITERAL1)
