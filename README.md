@@ -14,7 +14,7 @@ The downloaded code can be included as a new library into the IDE selecting the 
 
 or it can be installed throu the library manager from the Arduino IDE.
 
-Include YoutubeApi in your project:
+Include YouTubeSight in your project:
 
     #include <YouTubeSight.h>
 
