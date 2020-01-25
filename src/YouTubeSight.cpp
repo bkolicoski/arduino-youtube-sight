@@ -46,7 +46,7 @@ bool YouTubeSight::getData()
                 String line = client->readStringUntil('\n');
                 line.trim();
                 if (!finishedHeaders) {
-                    if (currentLineIsBlank && line == "1c") {
+                    if (currentLineIsBlank && (line == "1c" || line == "1d")) {
                         finishedHeaders = true;
                     }
                     else {
@@ -98,6 +98,13 @@ bool YouTubeSight::getData()
 
         return true;
     }
+	
+	if(_debug) {
+		Serial.print("exit - body: ");
+		Serial.println(body);
+		Serial.print("exit - headers: ");
+		Serial.println(headers);
+	}
 
     return false;
 }
