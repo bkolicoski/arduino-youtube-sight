@@ -44,9 +44,12 @@ bool YouTubeSight::getData()
             while (client->available()) {
                 avail = finishedHeaders;
                 String line = client->readStringUntil('\n');
+				if(_debug) {
+					Serial.println(line);
+				}
                 line.trim();
                 if (!finishedHeaders) {
-                    if (currentLineIsBlank && (line == "1c" || line == "1d")) {
+                    if (currentLineIsBlank && line.length() == 2) {
                         finishedHeaders = true;
                     }
                     else {
