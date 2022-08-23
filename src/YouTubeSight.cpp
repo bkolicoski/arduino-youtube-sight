@@ -91,7 +91,7 @@ bool YouTubeSight::getData()
     }
 
     if (body != "") {
-        if(_debug) { Serial.println('parsing body'); }
+        if(_debug) { Serial.println("parsing body"); }
         channelStats.views = getValue(body, ',', 0);
         channelStats.subscribers_gained = getValue(body, ',', 1);
         channelStats.subscribers_lost = getValue(body, ',', 2);
